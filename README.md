@@ -1,7 +1,6 @@
 # Rails_Portfolio Applicaiton
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is a Ruby on Rails 6 application for portfolio.
 
 Things you may want to cover:
 
