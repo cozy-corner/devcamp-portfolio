@@ -22,6 +22,25 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  # GET /portfolios/1/edit
+  def edit
+    @portfolio_item = Portfolio.find(params[:id])
+  end
+
+  def update
+    @portfolio_item = Portfolio.find(params[:id])
+    respond_to do |format|
+
+      if @portfolio_item.update(portfolio_params)
+        format.html { redirect_to portfolios_path, notice: 'The record was successfully updated.' }
+        format.json { render :show, status: :ok, location: @portfolio_item }
+      else
+        format.html { render :update }
+        format.json { render json: @portfolio_item.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
 
     # Never trust parameters from the scary internet, only allow the white list through.
