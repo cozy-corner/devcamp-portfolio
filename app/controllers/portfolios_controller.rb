@@ -44,7 +44,16 @@ class PortfoliosController < ApplicationController
       end
     end
   end
-  
+
+  def destroy
+    @portfolio_item = Portfolio.find(params[:id])
+
+    @portfolio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully destroyed.' }
+    end
+  end  
+
   private
 
     # Never trust parameters from the scary internet, only allow the white list through.
