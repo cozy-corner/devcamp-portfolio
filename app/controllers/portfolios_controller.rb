@@ -27,6 +27,10 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.find(params[:id])
   end
 
+  def show
+      @portfolio_item = Portfolio.find(params[:id])
+  end
+
   def update
     @portfolio_item = Portfolio.find(params[:id])
     respond_to do |format|
@@ -40,7 +44,7 @@ class PortfoliosController < ApplicationController
       end
     end
   end
-
+  
   private
 
     # Never trust parameters from the scary internet, only allow the white list through.
