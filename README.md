@@ -1,4 +1,4 @@
-# Rails_Portfolio Applicaiton
+# Rails_DevcampPortfolio Applicaiton
 
 > This is a Ruby on Rails 6 application for portfolio.
 
