@@ -18,10 +18,8 @@ class PortfoliosController < ApplicationController
     respond_to do |format|
       if @portfolio_item.save
         format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live' }
-        format.json { render :show, status: :created, location: @portfolio_item }
       else 
         format.html { render :new }
-        format.json { render json: @portfolio_item.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -62,6 +60,7 @@ class PortfoliosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_params
-      params.require(:portfolio).permit(:title, :subtile, :body)
+      # allowed keys
+      params.require(:portfolio).permit(:title, :subtitle, :body)
     end
 end
