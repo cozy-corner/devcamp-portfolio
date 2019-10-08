@@ -49,9 +49,16 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rename'
 
 gem 'friendly_id', '~> 5.2.4'
+
+# Authentication
 gem 'devise', '~> 4.7', '>= 4.7.1'
 
+# Css framework
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
+# My view tool
 gem 'cozies_view_tool', '~> 0.1.0'
+
+# Authorization
+gem 'petergate', '~> 2.0', '>= 2.0.1'
