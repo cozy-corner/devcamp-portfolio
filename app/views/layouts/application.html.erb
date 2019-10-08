@@ -20,10 +20,10 @@
       <div class="site-wrapper-inner">
         <div class="cover-container">
           <%= render "/shared/application_nav"%>
-          <%= login_helper %>
           <%= yield %>
+          
+          <%= render "/shared/application_footer"%>
           <%= source_helper("applicaiton") %>
-          <%= copyright_generator %>
         </div>
       </div>
     </div>
