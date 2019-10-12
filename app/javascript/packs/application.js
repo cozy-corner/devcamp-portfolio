@@ -1,5 +1,6 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import '../src/application.scss';
 import 'bootstrap';
 
 // This file is automatically compiled by Webpack, along with any other files
@@ -22,4 +23,4 @@ require("channels")
 // require jquery
 // require popper
 // require bootstrap-sprockets
-// require_tree .
+//=require_tree .

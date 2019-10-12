@@ -32,3 +32,6 @@ yarn-debug.log*
 
 # I don't want to show secret
 /config/credentials.yml.enc
+
+# webpacker
+*node_modules/

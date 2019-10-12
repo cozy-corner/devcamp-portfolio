@@ -10,22 +10,19 @@
 
     <meta name="keywords" content=<%=@seo_keywords%> />  
  
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <%= render "/shared/application_nav"%>
-          <%= yield %>
-          
-          <%= render "/shared/application_footer"%>
-          <%= source_helper("applicaiton") %>
-        </div>
-      </div>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <%= render "/shared/application_nav"%>
+      <%= yield %>
+      
+      <%= render "/shared/application_footer"%>
+      <%= source_helper("applicaiton") %>
+    
     </div>
   </body>
 </html>
