@@ -25,4 +25,8 @@ class Portfolio < ApplicationRecord
     # ||= means, if self.main_image = nil ~ end
   end
 
+  def self.by_position
+    Portfolio.order("position ASC")
+  end
+
 end
