@@ -1,6 +1,5 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-import '../src/application.scss';
 import 'bootstrap';
 
 // This file is automatically compiled by Webpack, along with any other files
@@ -20,7 +19,8 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-// require jquery
-// require popper
-// require bootstrap-sprockets
+// This is not comment out
+//=require jquery
+//=require popper
+//=require bootstrap-sprockets
 //=require_tree .

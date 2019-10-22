@@ -54,8 +54,8 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 
 # Css framework > webpacker
-#gem 'bootstrap', '~> 4.3.1'
-#gem 'jquery-rails'
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
 
 # My view tool
 gem 'cozies_view_tool', '~> 0.1.0'
