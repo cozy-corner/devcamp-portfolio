@@ -5,7 +5,8 @@ class PortfoliosController < ApplicationController
   layout 'portfolio'
 
   def index
-    @portfolio_items = Portfolio.all
+    # lowest to highest
+    @portfolio_items = Portfolio.by_position
   end
 
   def angular
