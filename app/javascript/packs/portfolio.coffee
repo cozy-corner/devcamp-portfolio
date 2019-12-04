@@ -10,20 +10,20 @@ set_positions = ->
 
 ready = ->
   set_positions()
-  html5sortable('.sortable')
-  html5sortable('.sortable')[0].addEventListener 'sortupdate', (e) ->
-    update_order = []
-    set_positions()
-    $('.card').each (i) ->
-      update_order.push
-        id: $(this).data('id')
-        position: i + 1
+  if html5sortable('.sortable')[0]?
+    html5sortable('.sortable')[0].addEventListener 'sortupdate', (e) ->
+      update_order = []
+      set_positions()
+      $('.card').each (i) ->
+        update_order.push
+          id: $(this).data('id')
+          position: i + 1
+        return
+      $.ajax
+        type: 'PUT'
+        url: '/portfolios/sort'
+        data: order: update_order
       return
-    $.ajax
-      type: 'PUT'
-      url: '/portfolios/sort'
-      data: order: update_order
-    return
   return
 
 $(document).ready ready
